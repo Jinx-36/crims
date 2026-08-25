@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#F5F0EE"/>
+  
+  <!-- Stylized Dragonfly / Fairy Motif -->
+  <g transform="translate(100, 100)">
+    <!-- Wings - Upper Right -->
+    <path d="M2, -5 C20, -40 60, -30 45, 0 C35, 15 10, 5 2, 2" stroke="#8B1E1E" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Wings - Lower Right -->
+    <path d="M3, 5 C15, 25 40, 30 35, 10 C32, 5 10, 2 3, 2" stroke="#8B1E1E" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+    
+    <!-- Wings - Upper Left (Mirrored) -->
+    <path d="M-2, -5 C-20, -40 -60, -30 -45, 0 C-35, 15 -10, 5 -2, 2" stroke="#8B1E1E" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Wings - Lower Left (Mirrored) -->
+    <path d="M-3, 5 C-15, 25 -40, 30 -35, 10 C-32, 5 -10, 2 -3, 2" stroke="#8B1E1E" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+    
+    <!-- Body / Connection Line -->
+    <path d="M0, -15 L0, 40" stroke="#8B1E1E" stroke-width="1.5" stroke-linecap="round"/>
+    
+    <!-- Tiny Star Accent -->
+    <path d="M0, -25 L1, -22 L4, -22 L2, -20 L3, -17 L0, -19 L-3, -17 L-2, -20 L-4, -22 L-1, -22 Z" fill="#8B1E1E"/>
+  </g>
+  
+  <!-- Subtle Growth Line -->
+  <path d="M40, 160 Q100, 150 160, 140" stroke="#8B1E1E" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.4"/>
+</svg>

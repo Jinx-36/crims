@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
+@theme {
+  --color-crimson: #8B1E1E;
+  --color-crimson-deep: #511010;
+  --color-crimson-soft: #C74D4D;
+  --color-crimson-tint: #F1DCDC;
+  --color-ivory: #F5F0EE;
+  --color-blanc-chaud: #FFFFFF;
+  --color-beige-surface: #EDE4DF;
+  --color-bordure: #E1D5CE;
+  --color-encre: #1F1815;
+  --color-text-secondary: #6E6259;
+  --color-gold-accent: #C9A96E;
+
+  --font-sans: var(--font-montserrat), sans-serif;
+  --font-display: var(--font-gloock), serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #F5F0EE; /* Ivory */
+  --foreground: #1F1815; /* Encre */
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Custom typography configurations */
+.font-gloock {
+  font-family: var(--font-display);
+}
+
+h1, h2, .font-display {
+  font-family: var(--font-display);
+  font-weight: 400;
 }
