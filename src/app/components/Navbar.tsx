@@ -10,14 +10,14 @@ export default function Navbar() {
   const links = [
     { name: "Accueil", href: "/" },
     { name: "Notre approche & Services", href: "/notre-approche" },
-    { name: "À propos & FAQ", href: "/a-propos" },
+    { name: "Qui est CRIMSAI", href: "/a-propos" },
     { name: "Ressources", href: "/ressources" },
     { name: "Contact", href: "/contact" },
   ];
 
   return (
     <header className="w-full bg-ivory border-b border-bordure/30 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 md:px-20 h-16 md:h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 md:px-24 h-16 md:h-24 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <div className="relative w-28 h-8 md:w-32 md:h-10">
             <Image
@@ -51,7 +51,7 @@ export default function Navbar() {
         <div>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-[10px] md:text-xs font-semibold tracking-wider uppercase bg-crimson text-blanc-chaud border border-transparent hover:bg-crimson-deep active:scale-98 transition-all duration-300"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-full text-[10px] md:text-xs font-semibold tracking-wider uppercase bg-crimson text-blanc-chaud border border-transparent hover:bg-crimson-deep active:scale-98 transition-all duration-300"
           >
             Réserver un appel
           </Link>

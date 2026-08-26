@@ -1,228 +1,212 @@
 import Link from "next/link";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/app/components/ScrollReveal";
 
-export const metadata = {
-  title: "Stratégie, Digital et Marketing Connecté pour la Beauté | CRIMSAI",
-  description: "Découvrez les expertises CRIMSAI: stratégie, tunnel de vente, contenu, digital et automatisation. Un parcours client de l'onboarding au reporting.",
-};
-
 export default function Page() {
-  const steps = [
-    { title: "Appel découverte", desc: "Nous évaluons votre situation, vos objectifs et notre compatibilité." },
-    { title: "Diagnostic & Proposition", desc: "Nous identifions le véritable problème et vous recommandons l'offre adaptée." },
-    { title: "Signature & Onboarding", desc: "Vous accédez à notre Client Hub centralisé pour nous fournir les accès et informations nécessaires de manière sécurisée." },
-    { title: "Stratégie & Production", desc: "Nous déployons les actions validées, visibles en temps réel sur la plateforme." },
-    { title: "Suivi & Reporting", desc: "Nous mesurons l'impact des actions, rendons compte des résultats et optimisons le système en continu." },
-  ];
-
-  const expertises = [
-    {
-      title: "Stratégie",
-      items: [
-        "Diagnostic de l'existant.",
-        "Positionnement et différenciation.",
-        "Architecture du parcours client.",
-        "Création de tunnel de vente.",
-        "Définition des indicateurs de performance."
-      ],
-      italic: "La stratégie transforme vos données en décisions claires pour structurer chaque étape de votre croissance."
-    },
-    {
-      title: "Contenu & Visibilité",
-      items: [
-        "Stratégie et ligne éditoriale.",
-        "Gestion des réseaux sociaux.",
-        "Création de contenu adapté aux plateformes.",
-        "Community management et modération.",
-        "Planification stratégique des publications."
-      ],
-      italic: "Chaque publication remplit une fonction précise dans votre écosystème pour attirer et rassurer votre audience."
-    },
-    {
-      title: "Digital",
-      items: [
-        "Création de site web sur-mesure.",
-        "Refonte et optimisation de sites existants.",
-        "Développement de pages de destination (landing pages).",
-        "Intégration des outils de tracking.",
-        "Maintenance et évolutions techniques."
-      ],
-      italic: "Notre développement web interne soutient directement votre stratégie marketing sans dépendre d'intermédiaires externes."
-    },
-    {
-      title: "Acquisition & Conversion",
-      items: [
-        "Création de campagnes publicitaires.",
-        "Stratégies d'acquisition qualifiée.",
-        "Optimisation des taux de conversion.",
-        "Suivi du parcours d'achat.",
-        "Retargeting et reciblage publicitaire."
-      ],
-      italic: "Nous transformons votre visibilité en actions mesurables, en prospects qualifiés et en revenus."
-    },
-    {
-      title: "Expérience client & Fidélisation",
-      items: [
-        "Cartographie de l'expérience client.",
-        "Stratégie de rétention.",
-        "Parcours de réactivation des anciennes clientes.",
-        "Stimulation du réachat.",
-        "Systèmes de recommandation."
-      ],
-      italic: "L'acquisition coûte cher ; nous nous assurons que vos clientes restent et deviennent prescriptrices de votre entreprise."
-    },
-    {
-      title: "Automatisation & IA",
-      items: [
-        "Configuration experte de CRM.",
-        "Séquences d'emails et workflows automatisés.",
-        "Automatisation de la prise de rendez-vous.",
-        "Tableaux de bord et reporting automatisés.",
-        "Intégration d'outils d'intelligence artificielle."
-      ],
-      italic: "La technologie et l'automatisation fiabilisent vos processus commerciaux pour offrir un parcours client sans friction."
-    }
-  ];
-
-  const methodologySteps = [
-    "Comprendre", "Diagnostiquer", "Prioriser", "Connecter", 
-    "Exécuter", "Mesurer", "Apprendre", "Optimiser"
-  ];
-
   return (
-    <div className="flex-1 flex flex-col bg-ivory">
-      {/* Scroll 1: Methodology Title */}
-      <section className="py-20 md:py-28 border-b border-bordure/30">
-        <div className="max-w-7xl mx-auto px-6 md:px-20">
-          <div className="max-w-3xl">
+    <div className="flex-grow flex flex-col bg-ivory">
+      {/* Scroll 1: Notre approche */}
+      <section className="bg-ivory py-24 border-b border-bordure">
+        <div className="max-w-7xl mx-auto px-6 md:px-24">
+          <div className="max-w-3xl mb-12">
             <ScrollReveal>
-              <span className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-semibold text-crimson mb-4 inline-block">
-                Notre Méthodologie
+              <span className="text-[11px] font-semibold uppercase tracking-[0.08em] leading-[1.4] text-crimson mb-4 inline-block font-sans">
+                NOTRE APPROCHE
               </span>
             </ScrollReveal>
+
             <ScrollReveal delay={0.1}>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display leading-[1.1] text-encre tracking-tighter mb-8">
-                Comprendre avant d&apos;agir.
+              <h1 className="text-[36px] font-display font-normal leading-[1.15] tracking-[-0.005em] text-encre mb-8">
+                On ne commence pas par produire. On commence par comprendre.
               </h1>
             </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-              <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-6">
-                Notre méthodologie repose sur l&apos;analyse de votre réalité avant toute exécution. 
-                Nous structurons votre système de croissance en huit étapes :
-              </p>
-            </ScrollReveal>
 
-            {/* The 8 Steps Horizontal Snap / Grid */}
-            <ScrollReveal delay={0.3}>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-                {methodologySteps.map((step, idx) => (
-                  <div key={idx} className="bg-blanc-chaud border border-bordure/50 p-5 rounded-xl shadow-1">
-                    <span className="text-[10px] font-mono text-crimson font-bold block mb-2">0{idx + 1}</span>
-                    <span className="text-sm font-semibold text-encre tracking-wide uppercase">{step}</span>
-                  </div>
-                ))}
+            <ScrollReveal delay={0.2}>
+              <div className="text-[16px] font-normal font-sans leading-[1.6] text-text-secondary space-y-6 mb-12">
+                <p>
+                  Avant de proposer du contenu, une campagne ou un outil, nous cherchons à comprendre :
+                </p>
+                <ul className="pl-6 list-disc space-y-2 text-encre">
+                  <li>où vous voulez aller,</li>
+                  <li>ce qui fonctionne déjà,</li>
+                  <li>ce qui bloque,</li>
+                  <li>et ce qui mérite réellement d’être amélioré.</li>
+                </ul>
+                <p>
+                  Puis nous construisons les connexions nécessaires autour de votre objectif.
+                </p>
               </div>
             </ScrollReveal>
-
-            <ScrollReveal delay={0.4}>
-              <p className="text-sm md:text-base text-text-secondary leading-relaxed mt-8 border-l border-crimson/30 pl-4 italic">
-                La technologie et les outils sont toujours mis au service de la stratégie. L&apos;objectif dicte l&apos;action, le problème définit la solution.
-              </p>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Scroll 2: Client Experience */}
-      <section className="bg-blanc-chaud py-24 border-b border-bordure/30">
-        <div className="max-w-7xl mx-auto px-6 md:px-20">
-          <div className="max-w-3xl mb-16">
-            <ScrollReveal>
-              <span className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-semibold text-text-secondary mb-4 inline-block">
-                Collaboration
-              </span>
-            </ScrollReveal>
-            <ScrollReveal delay={0.1}>
-              <h2 className="text-3xl md:text-4xl font-display text-encre tracking-tight mb-6">
-                L&apos;expérience client CRIMSAI : Comment nous collaborons.
-              </h2>
-            </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-              <p className="text-base text-text-secondary leading-relaxed">
-                Dès notre premier échange, nous structurons une relation transparente et rigoureuse :
-              </p>
-            </ScrollReveal>
           </div>
 
+          {/* Steps Grid */}
           <StaggerContainer>
-            <div className="space-y-6 max-w-4xl">
-              {steps.map((step, idx) => (
-                <StaggerItem key={idx}>
-                  <div className="flex gap-6 items-start py-6 border-b border-bordure/40 last:border-b-0 hover:pl-2 transition-all duration-300">
-                    <span className="text-lg font-display text-crimson font-bold">0{idx + 1}</span>
-                    <div>
-                      <h3 className="text-lg font-semibold text-encre mb-2">{step.title}</h3>
-                      <p className="text-sm text-text-secondary leading-relaxed max-w-[65ch]">{step.desc}</p>
-                    </div>
-                  </div>
-                </StaggerItem>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <StaggerItem>
+                <div className="bg-blanc-chaud border border-bordure rounded-[12px] p-6 hover:shadow-2 transition-all duration-300 h-full flex flex-col">
+                  <span className="text-[14px] font-semibold text-crimson mb-4 font-sans">01 — Comprendre</span>
+                  <p className="text-[14px] font-normal font-sans leading-[1.6] text-text-secondary">
+                    Votre entreprise, votre marché, vos clients et vos priorités.
+                  </p>
+                </div>
+              </StaggerItem>
+
+              <StaggerItem>
+                <div className="bg-blanc-chaud border border-bordure rounded-[12px] p-6 hover:shadow-2 transition-all duration-300 h-full flex flex-col">
+                  <span className="text-[14px] font-semibold text-crimson mb-4 font-sans">02 — Identifier</span>
+                  <p className="text-[14px] font-normal font-sans leading-[1.6] text-text-secondary">
+                    Les blocages et les opportunités dans votre parcours de croissance.
+                  </p>
+                </div>
+              </StaggerItem>
+
+              <StaggerItem>
+                <div className="bg-blanc-chaud border border-bordure rounded-[12px] p-6 hover:shadow-2 transition-all duration-300 h-full flex flex-col">
+                  <span className="text-[14px] font-semibold text-crimson mb-4 font-sans">03 — Connecter</span>
+                  <p className="text-[14px] font-normal font-sans leading-[1.6] text-text-secondary">
+                    Les actions, canaux et outils qui doivent travailler ensemble.
+                  </p>
+                </div>
+              </StaggerItem>
+
+              <StaggerItem>
+                <div className="bg-blanc-chaud border border-bordure rounded-[12px] p-6 hover:shadow-2 transition-all duration-300 h-full flex flex-col">
+                  <span className="text-[14px] font-semibold text-crimson mb-4 font-sans">04 — Faire évoluer</span>
+                  <p className="text-[14px] font-normal font-sans leading-[1.6] text-text-secondary">
+                    Mesurer, apprendre et améliorer le système dans le temps.
+                  </p>
+                </div>
+              </StaggerItem>
             </div>
           </StaggerContainer>
         </div>
       </section>
 
-      {/* Scroll 3: Connected Expertise */}
-      <section className="py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 md:px-20">
-          <div className="max-w-3xl mb-16">
+      {/* Scroll 2: Nos domaines d'intervention */}
+      <section className="bg-blanc-chaud py-24 border-b border-bordure">
+        <div className="max-w-7xl mx-auto px-6 md:px-24">
+          <div className="max-w-3xl mb-12">
             <ScrollReveal>
-              <span className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-semibold text-crimson mb-4 inline-block">
-                Domaines d&apos;expertise
-              </span>
-            </ScrollReveal>
-            <ScrollReveal delay={0.1}>
-              <h2 className="text-3xl md:text-4xl font-display text-encre tracking-tight mb-6">
-                Nos expertises connectées.
+              <h2 className="text-[28px] font-display font-normal leading-[1.2] tracking-normal text-encre mb-8">
+                Ce que nous pouvons connecter.
               </h2>
             </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-              <p className="text-base text-text-secondary leading-relaxed max-w-[55ch]">
-                Nous sélectionnons uniquement les leviers nécessaires à votre situation.
-              </p>
-            </ScrollReveal>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {expertises.map((exp, idx) => (
-              <ScrollReveal key={idx} delay={idx * 0.05}>
-                <div className="bg-blanc-chaud border border-bordure/60 hover:border-crimson/30 rounded-2xl p-6 md:p-8 flex flex-col justify-between h-full shadow-1 hover:shadow-2 transition-all duration-500">
-                  <div>
-                    <h3 className="text-lg font-semibold text-encre mb-6 pb-2 border-b border-bordure/40">{exp.title}</h3>
-                    <ul className="space-y-3 mb-6">
-                      {exp.items.map((item, idx2) => (
-                        <li key={idx2} className="text-xs text-text-secondary flex items-start gap-2 leading-relaxed">
-                          <span className="text-crimson mt-0.5">•</span>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <p className="text-xs italic text-crimson-deep bg-crimson-tint/30 p-4 rounded-lg mt-auto border-l-2 border-crimson">
-                    {exp.italic}
+          <StaggerContainer>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              <StaggerItem>
+                <div className="bg-ivory border border-bordure rounded-[12px] p-6 hover:shadow-2 transition-all duration-300 h-full flex flex-col justify-between">
+                  <h3 className="text-[20px] font-semibold font-sans leading-[1.3] text-crimson mb-4">
+                    VISIBILITÉ
+                  </h3>
+                  <p className="text-[14px] font-normal font-sans leading-[1.6] text-text-secondary">
+                    Stratégie de contenu, présence digitale et positionnement.
                   </p>
                 </div>
-              </ScrollReveal>
-            ))}
-          </div>
+              </StaggerItem>
 
-          <div className="mt-20 text-center">
+              <StaggerItem>
+                <div className="bg-ivory border border-bordure rounded-[12px] p-6 hover:shadow-2 transition-all duration-300 h-full flex flex-col justify-between">
+                  <h3 className="text-[20px] font-semibold font-sans leading-[1.3] text-crimson mb-4">
+                    ACQUISITION
+                  </h3>
+                  <p className="text-[14px] font-normal font-sans leading-[1.6] text-text-secondary">
+                    Parcours, campagnes, offres et dispositifs de conversion.
+                  </p>
+                </div>
+              </StaggerItem>
+
+              <StaggerItem>
+                <div className="bg-ivory border border-bordure rounded-[12px] p-6 hover:shadow-2 transition-all duration-300 h-full flex flex-col justify-between">
+                  <h3 className="text-[20px] font-semibold font-sans leading-[1.3] text-crimson mb-4">
+                    EXPÉRIENCE CLIENT
+                  </h3>
+                  <p className="text-[14px] font-normal font-sans leading-[1.6] text-text-secondary">
+                    Points de contact, parcours et expérience digitale.
+                  </p>
+                </div>
+              </StaggerItem>
+
+              <StaggerItem>
+                <div className="bg-ivory border border-bordure rounded-[12px] p-6 hover:shadow-2 transition-all duration-300 h-full flex flex-col justify-between">
+                  <h3 className="text-[20px] font-semibold font-sans leading-[1.3] text-crimson mb-4">
+                    FIDÉLISATION
+                  </h3>
+                  <p className="text-[14px] font-normal font-sans leading-[1.6] text-text-secondary">
+                    Automatisation, relation client et dispositifs de rétention.
+                  </p>
+                </div>
+              </StaggerItem>
+
+              <StaggerItem>
+                <div className="bg-ivory border border-bordure rounded-[12px] p-6 hover:shadow-2 transition-all duration-300 h-full flex flex-col justify-between">
+                  <h3 className="text-[20px] font-semibold font-sans leading-[1.3] text-crimson mb-4">
+                    DIGITAL
+                  </h3>
+                  <p className="text-[14px] font-normal font-sans leading-[1.6] text-text-secondary">
+                    Site web, outils et écosystème digital.
+                  </p>
+                </div>
+              </StaggerItem>
+
+              <StaggerItem>
+                <div className="bg-ivory border border-bordure rounded-[12px] p-6 hover:shadow-2 transition-all duration-300 h-full flex flex-col justify-between">
+                  <h3 className="text-[20px] font-semibold font-sans leading-[1.3] text-crimson mb-4">
+                    AUTOMATISATION
+                  </h3>
+                  <p className="text-[14px] font-normal font-sans leading-[1.6] text-text-secondary">
+                    Des systèmes qui permettent à certaines actions de continuer à travailler sans intervention constante.
+                  </p>
+                </div>
+              </StaggerItem>
+            </div>
+          </StaggerContainer>
+
+          {/* Editorial Italic Hook */}
+          <ScrollReveal delay={0.2}>
+            <div className="p-6 border-l border-crimson bg-beige-surface/30 rounded-r-[12px]">
+              <p className="text-[18px] font-medium italic font-sans leading-[1.5] text-crimson-deep">
+                Nous ne vendons pas des actions séparées.<br />
+                Nous construisons leur cohérence.
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Scroll 3: La Collaboration */}
+      <section className="bg-ivory py-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-24">
+          <div className="max-w-3xl mb-12">
             <ScrollReveal>
+              <h2 className="text-[28px] font-display font-normal leading-[1.2] tracking-normal text-encre mb-8">
+                Une stratégie qui doit vivre avec votre entreprise.
+              </h2>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.1}>
+              <div className="text-[16px] font-normal font-sans leading-[1.6] text-text-secondary space-y-6 mb-12">
+                <p>
+                  Chaque collaboration commence par un diagnostic de votre situation.
+                </p>
+                <p>
+                  Ensuite, nous définissons les priorités, construisons les actions nécessaires et suivons leur évolution.
+                </p>
+                
+                <div className="pl-6 border-l border-bordure space-y-2 text-encre font-medium">
+                  <p>Pas de solution copiée-collée.</p>
+                  <p>Pas de stratégie pour remplir un document.</p>
+                  <p>Pas d’action sans objectif.</p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-crimson text-blanc-chaud hover:bg-crimson-deep transition-all duration-300 active:scale-98"
+                className="inline-flex items-center justify-center px-8 py-3 rounded-full text-[11px] font-semibold tracking-[0.08em] uppercase bg-crimson text-blanc-chaud hover:bg-crimson-deep transition-all duration-300 active:scale-98 font-sans"
               >
-                Réserver un appel découverte
+                Parlons de votre projet →
               </Link>
             </ScrollReveal>
           </div>

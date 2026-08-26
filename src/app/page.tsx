@@ -4,150 +4,200 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from "@/app/components/Sc
 
 export default function Page() {
   return (
-    <div className="flex-1 flex flex-col">
-      {/* Scroll 1: Hero Section */}
-      <section className="relative min-h-[90dvh] flex items-center pt-12 pb-24 overflow-hidden bg-ivory">
-        <div className="max-w-7xl mx-auto px-6 md:px-20 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
-          {/* Left Column: Text Content */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
+    <div className="flex-grow flex flex-col bg-ivory">
+      {/* Scroll 1: Hero Section (Le Déclic) */}
+      <section className="relative min-h-[90dvh] flex items-center pt-24 pb-32 overflow-hidden bg-ivory">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/home_bg.jpeg"
+            alt="CrimsAI decorative background"
+            fill
+            className="object-cover object-right-bottom select-none pointer-events-none"
+            priority
+          />
+        </div>
+
+        {/* Content Container */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-24 w-full">
+          <div className="max-w-3xl flex flex-col items-start text-left">
             <ScrollReveal delay={0.1}>
-              <span className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-semibold text-crimson mb-4 inline-block">
-                Partenaire de Croissance Beauté
+              <span className="text-[11px] font-semibold uppercase tracking-[0.08em] leading-[1.4] text-crimson mb-4 inline-block font-sans">
+                Partenaire de croissance des entreprises de beauté
               </span>
             </ScrollReveal>
             
             <ScrollReveal delay={0.2} y={30}>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display leading-[1.1] text-encre tracking-tighter mb-6 max-w-2xl">
-                Il ne faut pas attendre d&apos;être une grande marque pour penser comme telle.
+              <h1 className="text-[clamp(44px,6vw,72px)] font-display font-normal leading-[1.05] tracking-[-0.01em] text-encre mb-6">
+                Il ne faut pas attendre d’être une grande marque pour penser comme telle.
               </h1>
             </ScrollReveal>
             
             <ScrollReveal delay={0.3}>
-              <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 max-w-[55ch]">
-                Nous aidons les entreprises de l&apos;univers de la beauté à structurer leur croissance. 
-                Nous connectons votre visibilité, votre acquisition et votre fidélisation au sein d&apos;un parcours client cohérent.
-              </p>
+              <div className="text-[16px] font-normal font-sans leading-[1.6] text-text-secondary mb-8 space-y-4">
+                <p>
+                  Votre visibilité peut être bonne.<br />
+                  Votre site peut être beau.<br />
+                  Votre contenu peut être régulier.
+                </p>
+                <p>
+                  Mais si chaque action travaille de son côté, votre croissance finit par ralentir.
+                </p>
+                <p>
+                  CRIMSAI connecte ce qui existe déjà pour transformer vos actions marketing en un véritable système de croissance.
+                </p>
+              </div>
             </ScrollReveal>
             
             <ScrollReveal delay={0.4}>
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-3.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-crimson text-blanc-chaud hover:bg-crimson-deep transition-all duration-300 active:scale-98"
-                >
-                  Réserver un appel découverte
-                </Link>
-                <span className="text-xs text-text-secondary font-medium italic mt-2 sm:mt-0">
-                  (30 min · Gratuit · Sans engagement)
-                </span>
-              </div>
-            </ScrollReveal>
-          </div>
-          
-          {/* Right Column: Abstract Stitch Illustration */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end z-10">
-            <ScrollReveal delay={0.3} y={40}>
-              <div className="relative w-[320px] h-[320px] md:w-[400px] md:h-[400px] bg-blanc-chaud rounded-2xl border border-bordure shadow-1 p-6 md:p-8 hover:shadow-2 transition-all duration-500">
-                <div className="absolute top-4 left-4 text-[9px] font-mono tracking-widest uppercase text-text-secondary opacity-60">
-                  Stitch Asset // Fig. 01
-                </div>
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/growth.svg"
-                    alt="CrimsAI growth minimalist line-art illustration"
-                    fill
-                    className="object-contain"
-                    priority
-                  />
-                </div>
-              </div>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-3 rounded-full text-[11px] font-semibold tracking-[0.08em] uppercase bg-crimson text-blanc-chaud hover:bg-crimson-deep transition-all duration-300 active:scale-98 font-sans"
+              >
+                Parlons de votre croissance →
+              </Link>
             </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* Scroll 2: Problem Statement */}
-      <section className="bg-blanc-chaud border-y border-bordure/50 py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 md:px-20">
-          <div className="max-w-3xl">
+      {/* Scroll 2: La Signature */}
+      <section className="bg-blanc-chaud border-y border-bordure py-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-24">
+          <div className="max-w-3xl mb-12">
             <ScrollReveal>
-              <span className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-semibold text-text-secondary mb-4 inline-block">
-                Le Constat
-              </span>
-            </ScrollReveal>
-            
-            <ScrollReveal delay={0.1}>
-              <h2 className="text-3xl md:text-4xl font-display text-encre tracking-tight mb-8">
-                Vos actions marketing existent, mais travaillent-elles ensemble ?
+              <h2 className="text-[clamp(34px,4vw,48px)] font-display font-normal leading-[1.1] tracking-[-0.005em] text-encre mb-8">
+                ATTIRER → CONVERTIR → FIDÉLISER
               </h2>
             </ScrollReveal>
             
-            <ScrollReveal delay={0.2}>
-              <div className="border-l border-crimson/30 pl-6 md:pl-8 py-2">
-                <p className="text-lg md:text-xl font-medium text-crimson mb-6 leading-relaxed">
-                  Le problème n&apos;est pas le manque d&apos;actions. C&apos;est leur déconnexion.
+            <ScrollReveal delay={0.1}>
+              <div className="text-[16px] font-normal font-sans leading-[1.6] text-text-secondary mb-8 space-y-4">
+                <p>Une croissance saine ne repose pas sur une seule action.</p>
+                <p>
+                  Elle commence par attirer les bonnes personnes.<br />
+                  Elle continue en transformant leur intérêt en décision.<br />
+                  Elle se renforce lorsqu’elles ont envie de revenir.
                 </p>
-                <p className="text-base text-text-secondary leading-relaxed max-w-[65ch]">
-                  Une entreprise beauté peut posséder un site internet, des campagnes publicitaires, 
-                  des réseaux sociaux actifs et des outils digitaux, et pourtant faire face à un parcours client fragmenté. 
-                  Publier davantage ou lancer de nouvelles campagnes ne suffit pas toujours à résoudre ce problème.
+                <p className="font-semibold text-encre">
+                  Notre rôle : faire en sorte que chaque étape prépare la suivante.
                 </p>
               </div>
             </ScrollReveal>
           </div>
+
+          {/* Three pillars grid */}
+          <StaggerContainer>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              <StaggerItem>
+                <div className="bg-ivory border border-bordure rounded-[12px] p-6 hover:shadow-2 transition-all duration-300 h-full flex flex-col justify-between">
+                  <h3 className="text-[20px] font-semibold font-sans leading-[1.3] text-crimson mb-4">
+                    Visibilité
+                  </h3>
+                  <p className="text-[14px] font-normal font-sans leading-[1.6] text-text-secondary">
+                    Être vu par les bonnes personnes.
+                  </p>
+                </div>
+              </StaggerItem>
+              
+              <StaggerItem>
+                <div className="bg-ivory border border-bordure rounded-[12px] p-6 hover:shadow-2 transition-all duration-300 h-full flex flex-col justify-between">
+                  <h3 className="text-[20px] font-semibold font-sans leading-[1.3] text-crimson mb-4">
+                    Acquisition
+                  </h3>
+                  <p className="text-[14px] font-normal font-sans leading-[1.6] text-text-secondary">
+                    Transformer l’intérêt en opportunité.
+                  </p>
+                </div>
+              </StaggerItem>
+              
+              <StaggerItem>
+                <div className="bg-ivory border border-bordure rounded-[12px] p-6 hover:shadow-2 transition-all duration-300 h-full flex flex-col justify-between">
+                  <h3 className="text-[20px] font-semibold font-sans leading-[1.3] text-crimson mb-4">
+                    Fidélisation
+                  </h3>
+                  <p className="text-[14px] font-normal font-sans leading-[1.6] text-text-secondary">
+                    Créer les raisons de revenir.
+                  </p>
+                </div>
+              </StaggerItem>
+            </div>
+          </StaggerContainer>
+
+          {/* Editorial Italic Hook */}
+          <ScrollReveal delay={0.2}>
+            <div className="p-6 border-l border-crimson bg-beige-surface/30 rounded-r-[12px]">
+              <p className="text-[18px] font-medium italic font-sans leading-[1.5] text-crimson-deep">
+                Le problème n’est pas toujours ce que vous faites.<br />
+                C’est ce qui ne se connecte pas.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* Scroll 3: Solution/Connection */}
-      <section className="bg-ivory py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 md:px-20 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">
-          {/* Left Side: Editorial Banner */}
-          <div className="lg:col-span-5">
-            <ScrollReveal>
-              <div className="border border-dashed border-crimson/40 rounded-2xl p-8 bg-beige-surface/30">
-                <div className="w-12 h-12 rounded-full bg-crimson-tint flex items-center justify-center text-crimson font-display mb-6">
-                  ✨
-                </div>
-                <h3 className="text-xl font-semibold text-encre mb-4 font-sans">
-                  Notre Approche Connectée
-                </h3>
-                <p className="text-sm text-text-secondary leading-relaxed">
-                  Nous alignons chaque point de contact pour créer un écosystème qui convertit la curiosité en fidélité durable.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-          
-          {/* Right Side: Text & CTA */}
+      {/* Scroll 3: Le Visage */}
+      <section className="bg-ivory py-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Left Column: Text & CTA */}
           <div className="lg:col-span-7 flex flex-col items-start">
             <ScrollReveal>
-              <span className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-semibold text-crimson mb-4 inline-block">
-                La Solution
-              </span>
-            </ScrollReveal>
-            
-            <ScrollReveal delay={0.1}>
-              <h2 className="text-3xl md:text-4xl font-display text-encre tracking-tight mb-6">
-                La connexion est notre spécialisation.
+              <h2 className="text-[clamp(34px,4vw,48px)] font-display font-normal leading-[1.1] tracking-[-0.005em] text-encre mb-6">
+                Derrière CRIMSAI, une conviction.
               </h2>
             </ScrollReveal>
-            
-            <ScrollReveal delay={0.2}>
-              <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 max-w-[55ch]">
-                Nous sommes le partenaire de croissance des professionnels de la beauté. 
-                Nous n&apos;appliquons pas automatiquement la même solution à chaque entreprise. 
-                Nous identifions vos blocages réels et relions les expertises stratégiques, digitales et commerciales autour d&apos;un objectif d&apos;entreprise clair.
-              </p>
+
+            <ScrollReveal delay={0.1}>
+              <div className="text-[16px] font-normal font-sans leading-[1.6] text-text-secondary mb-8 space-y-4 max-w-[65ch]">
+                <p>La beauté n’a pas besoin de faire plus de bruit.</p>
+                <p>
+                  Elle mérite des stratégies qui comprennent réellement son marché, ses clients et ses enjeux de croissance.
+                </p>
+                <p>
+                  CRIMSAI est née de cette conviction : une marque n’a pas besoin de multiplier ses actions pour grandir. Elle doit savoir lesquelles connecter.
+                </p>
+              </div>
             </ScrollReveal>
-            
+
+            <ScrollReveal delay={0.2}>
+              <div className="text-[16px] font-semibold font-sans text-encre mb-8 space-y-2">
+                <p>Une agence pensée pour les entreprises de beauté.</p>
+                <p>Une approche pensée pour leur croissance.</p>
+              </div>
+            </ScrollReveal>
+
             <ScrollReveal delay={0.3}>
               <Link
-                href="/notre-approche"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-full text-xs font-semibold tracking-wider uppercase border border-encre text-encre bg-transparent hover:bg-encre hover:text-blanc-chaud transition-all duration-300 active:scale-98"
+                href="/a-propos"
+                className="inline-flex items-center justify-center px-8 py-3 rounded-full text-[11px] font-semibold tracking-[0.08em] uppercase border border-encre text-encre bg-transparent hover:bg-encre hover:text-blanc-chaud transition-all duration-300 active:scale-98 font-sans"
               >
-                Découvrir notre approche
+                Découvrir CRIMSAI →
               </Link>
+            </ScrollReveal>
+          </div>
+
+          {/* Right Column: Stylized Photo Placeholder */}
+          <div className="lg:col-span-5 flex justify-center w-full">
+            <ScrollReveal delay={0.2} y={30}>
+              <div className="relative w-full aspect-[4/5] max-w-[400px] bg-beige-surface border border-bordure rounded-[12px] p-6 hover:shadow-2 transition-all duration-500 flex flex-col justify-between items-center text-center">
+                <div className="w-full text-left text-[10px] font-semibold uppercase tracking-[0.06em] text-text-secondary">
+                  [Photo de la fondatrice]
+                </div>
+                
+                {/* Minimalist Graphic Element */}
+                <div className="my-auto flex flex-col items-center">
+                  <div className="w-16 h-16 rounded-full bg-crimson/10 flex items-center justify-center text-crimson mb-4 text-xl">
+                    ✨
+                  </div>
+                  <p className="text-[14px] font-medium font-sans italic text-crimson-deep max-w-[200px]">
+                    Conviction & Vision
+                  </p>
+                </div>
+
+                <div className="w-full text-right text-[10px] font-semibold uppercase tracking-[0.06em] text-text-secondary">
+                  CrimsAI Portrait
+                </div>
+              </div>
             </ScrollReveal>
           </div>
         </div>
