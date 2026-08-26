@@ -14,7 +14,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-beige-surface border-t border-bordure py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-6 md:px-24 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
+      <div className="container mx-auto px-6 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
         {/* Brand Side */}
         <div className="flex flex-col items-start gap-6">
           <div className="relative w-32 h-10">

@@ -6,7 +6,7 @@ export default function Page() {
     <div className="flex-grow flex flex-col bg-ivory">
       {/* Scroll 1: Notre approche */}
       <section className="bg-ivory py-24 border-b border-bordure">
-        <div className="max-w-7xl mx-auto px-6 md:px-24">
+        <div className="container mx-auto px-6 lg:px-20">
           <div className="max-w-3xl mb-12">
             <ScrollReveal>
               <span className="text-[11px] font-semibold uppercase tracking-[0.08em] leading-[1.4] text-crimson mb-4 inline-block font-sans">
@@ -83,7 +83,7 @@ export default function Page() {
 
       {/* Scroll 2: Nos domaines d'intervention */}
       <section className="bg-blanc-chaud py-24 border-b border-bordure">
-        <div className="max-w-7xl mx-auto px-6 md:px-24">
+        <div className="container mx-auto px-6 lg:px-20">
           <div className="max-w-3xl mb-12">
             <ScrollReveal>
               <h2 className="text-[28px] font-display font-normal leading-[1.2] tracking-normal text-encre mb-8">
@@ -176,7 +176,7 @@ export default function Page() {
 
       {/* Scroll 3: La Collaboration */}
       <section className="bg-ivory py-24">
-        <div className="max-w-7xl mx-auto px-6 md:px-24">
+        <div className="container mx-auto px-6 lg:px-20">
           <div className="max-w-3xl mb-12">
             <ScrollReveal>
               <h2 className="text-[28px] font-display font-normal leading-[1.2] tracking-normal text-encre mb-8">

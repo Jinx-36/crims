@@ -16,8 +16,8 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="w-full bg-ivory border-b border-bordure/30 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 md:px-24 h-16 md:h-24 flex items-center justify-between">
+    <header className="w-full bg-[#F5F0EE]/80 backdrop-blur-md border-b border-bordure/30 sticky top-0 z-50">
+      <div className="container mx-auto px-6 lg:px-20 h-16 md:h-24 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <div className="relative w-28 h-8 md:w-32 md:h-10">
             <Image

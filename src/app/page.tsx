@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <div className="flex-grow flex flex-col bg-ivory">
       {/* Scroll 1: Hero Section (Le Déclic) */}
-      <section className="relative min-h-[90dvh] flex items-center pt-24 pb-32 overflow-hidden bg-ivory">
+      <section className="relative pt-20 lg:pt-32 pb-20 lg:pb-32 overflow-hidden bg-ivory">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -19,7 +19,7 @@ export default function Page() {
         </div>
 
         {/* Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-24 w-full">
+        <div className="relative z-10 container mx-auto px-6 lg:px-20 w-full">
           <div className="max-w-3xl flex flex-col items-start text-left">
             <ScrollReveal delay={0.1}>
               <span className="text-[11px] font-semibold uppercase tracking-[0.08em] leading-[1.4] text-crimson mb-4 inline-block font-sans">
@@ -63,7 +63,7 @@ export default function Page() {
 
       {/* Scroll 2: La Signature */}
       <section className="bg-blanc-chaud border-y border-bordure py-24">
-        <div className="max-w-7xl mx-auto px-6 md:px-24">
+        <div className="container mx-auto px-6 lg:px-20">
           <div className="max-w-3xl mb-12">
             <ScrollReveal>
               <h2 className="text-[clamp(34px,4vw,48px)] font-display font-normal leading-[1.1] tracking-[-0.005em] text-encre mb-8">
@@ -138,7 +138,7 @@ export default function Page() {
 
       {/* Scroll 3: Le Visage */}
       <section className="bg-ivory py-24">
-        <div className="max-w-7xl mx-auto px-6 md:px-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="container mx-auto px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Text & CTA */}
           <div className="lg:col-span-7 flex flex-col items-start">
             <ScrollReveal>
@@ -176,29 +176,22 @@ export default function Page() {
             </ScrollReveal>
           </div>
 
-          {/* Right Column: Stylized Photo Placeholder */}
+          {/* Right Column: Founder Photo */}
           <div className="lg:col-span-5 flex justify-center w-full">
-            <ScrollReveal delay={0.2} y={30}>
-              <div className="relative w-full aspect-[4/5] max-w-[400px] bg-beige-surface border border-bordure rounded-[12px] p-6 hover:shadow-2 transition-all duration-500 flex flex-col justify-between items-center text-center">
-                <div className="w-full text-left text-[10px] font-semibold uppercase tracking-[0.06em] text-text-secondary">
-                  [Photo de la fondatrice]
+            <div className="w-full max-w-[400px]">
+              <ScrollReveal delay={0.2} y={30}>
+                <div className="relative w-full aspect-[4/5] hover:shadow-2 transition-all duration-500 rounded-2xl overflow-hidden border border-bordure">
+                  <Image
+                    src="/founder.jpg"
+                    alt="Fondatrice de CrimsAI"
+                    fill
+                    className="object-cover"
+                    sizes="(max-w-[768px]) 100vw, 400px"
+                    priority
+                  />
                 </div>
-                
-                {/* Minimalist Graphic Element */}
-                <div className="my-auto flex flex-col items-center">
-                  <div className="w-16 h-16 rounded-full bg-crimson/10 flex items-center justify-center text-crimson mb-4 text-xl">
-                    ✨
-                  </div>
-                  <p className="text-[14px] font-medium font-sans italic text-crimson-deep max-w-[200px]">
-                    Conviction & Vision
-                  </p>
-                </div>
-
-                <div className="w-full text-right text-[10px] font-semibold uppercase tracking-[0.06em] text-text-secondary">
-                  CrimsAI Portrait
-                </div>
-              </div>
-            </ScrollReveal>
+              </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>

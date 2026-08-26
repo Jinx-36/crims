@@ -8,13 +8,29 @@ export default function Page() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        alert("Une erreur est survenue. Veuillez réessayer.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Une erreur est survenue. Veuillez réessayer.");
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 1500);
+    }
   };
 
   const focusForm = () => {
@@ -28,7 +44,7 @@ export default function Page() {
     <div className="flex-grow flex flex-col bg-ivory">
       {/* Scroll 1: L'invitation & Form */}
       <section className="bg-ivory py-24 border-b border-bordure">
-        <div className="max-w-7xl mx-auto px-6 md:px-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="container mx-auto px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Invitation Content */}
           <div className="lg:col-span-6 flex flex-col items-start">
             <ScrollReveal>
@@ -176,7 +192,7 @@ export default function Page() {
 
       {/* Scroll 2: Avant notre échange */}
       <section className="bg-blanc-chaud py-24 border-b border-bordure">
-        <div className="max-w-7xl mx-auto px-6 md:px-24">
+        <div className="container mx-auto px-6 lg:px-20">
           <div className="max-w-3xl mb-12">
             <ScrollReveal>
               <h2 className="text-[28px] font-display font-normal leading-[1.2] tracking-normal text-encre mb-8">
@@ -204,7 +220,7 @@ export default function Page() {
 
       {/* Scroll 3: La dernière impression */}
       <section className="bg-ivory py-24">
-        <div className="max-w-7xl mx-auto px-6 md:px-24">
+        <div className="container mx-auto px-6 lg:px-20">
           <div className="max-w-3xl mb-12">
             <ScrollReveal>
               <h2 className="text-[28px] font-display font-normal leading-[1.2] tracking-normal text-encre mb-6">
