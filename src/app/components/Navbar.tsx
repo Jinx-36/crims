@@ -18,13 +18,13 @@ export default function Navbar() {
   return (
     <header className="w-full bg-[#F5F0EE]/80 backdrop-blur-md border-b border-bordure/30 sticky top-0 z-50">
       <div className="container mx-auto px-6 lg:px-20 h-16 md:h-24 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="relative w-28 h-8 md:w-32 md:h-10">
+        <Link href="/" className="flex items-center">
+          <div className="relative h-14 w-14 md:h-20 md:w-20">
             <Image
               src="/logo-crims-bm1.png"
               alt="CrimsAI Logo"
               fill
-              className="object-contain"
+              className="object-contain object-left"
               priority
             />
           </div>

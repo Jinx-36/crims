@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
         {/* Brand Side */}
         <div className="flex flex-col items-start gap-6">
-          <div className="relative w-32 h-10">
+          <div className="relative h-14 w-14">
             <Image
               src="/logo-crims-bm1.png"
               alt="CrimsAI Logo"

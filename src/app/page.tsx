@@ -43,22 +43,21 @@ export default function Page() {
   return (
     <div className="flex-grow flex flex-col bg-ivory">
       {/* Scroll 01: Hero Section (Preset A) */}
-      <section className="relative pt-24 lg:pt-36 pb-24 lg:pb-36 overflow-hidden bg-ivory">
-        {/* Background Image */}
-        <div className="absolute inset-y-0 right-0 z-0 w-full lg:w-1/2 h-full">
+      <section className="relative min-h-[85vh] lg:min-h-[760px] flex items-center py-20 lg:py-28 overflow-hidden bg-ivory">
+        {/* Background Image spanning the entire section */}
+        <div className="absolute inset-0 z-0 pointer-events-none select-none">
           <Image
             src="/home_bg.jpeg"
             alt="CrimsAI decorative background"
             fill
-            className="object-cover select-none pointer-events-none"
-            style={{ objectPosition: "right bottom" }}
+            className="object-contain object-right"
             priority
           />
         </div>
 
-        {/* Content Container */}
+        {/* Content Container - 60/40 Split */}
         <div className="relative z-10 container mx-auto px-6 lg:px-20 w-full">
-          <div className="max-w-md lg:max-w-[420px] flex flex-col items-start text-left">
+          <div className="w-full lg:w-3/5 max-w-3xl flex flex-col items-start text-left">
             <ScrollReveal delay={0.1}>
               <span className="text-[11px] font-semibold uppercase tracking-[0.08em] leading-[1.4] text-crimson mb-4 inline-block font-sans">
                 {"Partenaire de croissance des entreprises de beauté"}
@@ -66,8 +65,8 @@ export default function Page() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2} y={30}>
-              <h1 className="text-[clamp(36px,4.5vw,52px)] font-display font-normal leading-[1.05] tracking-[-0.01em] text-encre mb-6">
-                {"Agence de marketing digital pour l'univers de la beauté : Transformez vos actions en système de croissance."}
+              <h1 className="text-[clamp(40px,5vw,68px)] font-display font-normal leading-[1.05] tracking-[-0.01em] text-encre mb-6">
+                {"Transformez vos actions en système de croissance."}
               </h1>
             </ScrollReveal>
 
@@ -78,12 +77,17 @@ export default function Page() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.4}>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-full text-[11px] font-semibold tracking-[0.08em] uppercase bg-crimson text-blanc-chaud hover:bg-crimson-deep transition-all duration-300 active:scale-98 font-sans"
-              >
-                {"Réserver un audit de croissance (30 min - Sans engagement)"}
-              </Link>
+              <div className="flex flex-col items-start">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center px-8 py-4 rounded-full text-[11px] font-semibold tracking-[0.08em] uppercase bg-crimson text-blanc-chaud hover:bg-crimson-deep transition-all duration-300 active:scale-98 font-sans"
+                >
+                  {"Réserver un audit de croissance"}
+                </Link>
+                <span className="text-[13px] md:text-[14px] font-normal font-sans text-text-secondary mt-3">
+                  {"30 min - Sans engagement"}
+                </span>
+              </div>
             </ScrollReveal>
           </div>
         </div>
